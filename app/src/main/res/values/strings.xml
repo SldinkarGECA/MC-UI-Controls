@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">uicontrols</string>
+    <string-array name="city">
+        <item>Aurangabad</item>
+        <item>Pune</item>
+    </string-array>
+</resources>

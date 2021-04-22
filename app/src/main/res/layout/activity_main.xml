@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBack"
+    android:paddingLeft="8dp"
+    android:paddingTop="8dp"
+    android:paddingRight="8dp"
+    android:paddingBottom="8dp"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/AppName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="UI Controls"
+            android:textAlignment="center"
+            android:textColor="#4DD637"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/AppOwnerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/AppName"
+            android:gravity="center_horizontal"
+            android:text="Performed by: Sandesh Dinkar (BE18F06F013)"
+            android:textAlignment="center"
+            android:textColor="#383CC1"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:id="@+id/WidgetImage"
+            android:layout_width="wrap_content"
+            android:layout_height="50sp"
+            android:layout_below="@+id/AppOwnerName"
+            android:layout_marginTop="5sp"
+            android:layout_marginBottom="5sp"
+            android:src="@drawable/pic"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/Name"
+            style="@style/CustomFontStyle"
+            android:layout_width="100sp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/WidgetImage"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="18dp"
+            android:text="Name: " />
+
+        <EditText
+            android:id="@+id/GetName"
+            style="@style/CustomFontStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/WidgetImage"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/Name"
+            android:backgroundTint="@color/colorAccent"
+            android:hint="Enter your name:"
+            android:lineHeight="10dp" />
+
+        <TextView
+            android:id="@+id/Gender"
+            style="@style/CustomFontStyle"
+            android:layout_width="100sp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/GetName"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="20dp"
+            android:text="Gender: " />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@id/GetName"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="18dp"
+            android:layout_toRightOf="@id/Gender">
+
+            <RadioButton
+                android:id="@+id/radioMale"
+                style="@style/CustomFontStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:buttonTint="@color/colorAccent"
+                android:checked="true"
+                android:text="Male" />
+
+            <RadioButton
+                android:id="@+id/radioFemale"
+                style="@style/CustomFontStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:buttonTint="@color/colorAccent"
+                android:checked="false"
+                android:text="Female" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/Languages"
+            style="@style/CustomFontStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/radioGroup"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:text="Can Speak: " />
+
+        <CheckBox
+            android:id="@+id/English"
+            style="@style/CustomFontStyle"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_below="@id/radioGroup"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/Languages"
+            android:buttonTint="@color/colorAccent"
+            android:text="English" />
+
+        <CheckBox
+            android:id="@+id/Marathi"
+            style="@style/CustomFontStyle"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_below="@id/English"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@id/Languages"
+            android:buttonTint="@color/colorAccent"
+            android:text="Marathi" />
+
+        <CheckBox
+            android:id="@+id/Hindi"
+            style="@style/CustomFontStyle"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_below="@id/Marathi"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@id/Languages"
+            android:buttonTint="@color/colorAccent"
+            android:text="Hindi" />
+
+        <TextView
+            android:id="@+id/Hostel"
+            style="@style/CustomFontStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Hindi"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:text="Do you need Hostel?" />
+
+        <ToggleButton
+            android:id="@+id/toggleButton"
+            style="@style/CustomFontStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Hindi"
+            android:layout_marginLeft="50dp"
+            android:layout_toRightOf="@id/Hostel"
+            android:background="@drawable/custom_button"
+            android:textOff="No"
+            android:textOn="Yes"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/Age"
+            style="@style/CustomFontStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Hostel"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:text="Age: " />
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            style="@style/MySeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toggleButton"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toRightOf="@id/Age"
+            android:thumbTint="@color/colorAccent" />
+
+        <TextView
+            android:id="@+id/Rating"
+            style="@style/CustomFontStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Age"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:text="Your Rating: " />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="@style/CustomFontStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/seekBar"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@id/Rating"
+            android:progressTint="@color/colorAccent" />
+
+        <TextView
+            android:id="@+id/City"
+            style="@style/CustomFontStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Rating"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="30dp"
+            android:text="City: " />
+
+        <ListView
+            android:id="@+id/listView"
+            style="@style/CustomFontStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Rating"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="35dp"
+            android:layout_toRightOf="@id/City"
+            android:background="@drawable/custom_button"
+            android:listSelector="@color/purple_500"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/btnSubmit"
+            style="@style/CustomFontStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/listView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/custom_button"
+            android:text="Submit"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
